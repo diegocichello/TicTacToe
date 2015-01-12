@@ -16,8 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // instantiating mcmanager object
     self.mcManager = [[MCManager alloc] init];
+    //changing button appearance
+    UIImage *buttonImage = [[UIImage imageNamed:@"greyButton.png"]
+                            resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"greyButtonHighlight.png"]
+                                     resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
+
+    [[UIButton appearance] setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [[UIButton appearance] setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
+    [[UIButton appearance] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
