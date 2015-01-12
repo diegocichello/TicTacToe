@@ -19,14 +19,13 @@
     // instantiating mcmanager object
     self.mcManager = [[MCManager alloc] init];
     //changing button appearance
-    UIImage *buttonImage = [[UIImage imageNamed:@"greyButton.png"]
+    UIImage *buttonImage = [[UIImage imageNamed:@"blueButton.png"]
                             resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
-    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"greyButtonHighlight.png"]
+    UIImage *buttonImageHighlight = [[UIImage imageNamed:@"blueButtonHighlight.png"]
                                      resizableImageWithCapInsets:UIEdgeInsetsMake(20, 20, 20, 20)];
 
     [[UIButton appearance] setBackgroundImage:buttonImage forState:UIControlStateNormal];
     [[UIButton appearance] setBackgroundImage:buttonImageHighlight forState:UIControlStateHighlighted];
-    [[UIButton appearance] setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     return YES;
 
 }
