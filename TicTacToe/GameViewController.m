@@ -386,7 +386,7 @@
 
 -(void)didReceiveDataWithNotificationOnGame:(NSNotification *)notification{
     MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
-    //    NSString *peerDisplayName = peerID.displayName;
+    NSString *peerDisplayName = peerID.displayName;
 
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];

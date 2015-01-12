@@ -37,6 +37,10 @@
 
 -(void)setupMCBrowser{
     _browser = [[MCBrowserViewController alloc] initWithServiceType:@"chat-files" session:_session];
+    _browser.minimumNumberOfPeers = 1;
+    _browser.maximumNumberOfPeers = 1;
+
+
 }
 
 
